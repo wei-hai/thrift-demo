@@ -3,16 +3,16 @@ namespace java services.product
 namespace go services.product
 
 struct Product {
-    10: string id;
-    20: string name;
+    10: string id
+    20: string name
 }
 
 struct GetProductByIdRequest {
-    10: list<string> ids;
+    10: list<string> ids
 }
 
 struct GetProductByIdResponse {
-    10: optional list<Product> products;
+    10: optional list<Product> products
 }
 
 service ProductService {

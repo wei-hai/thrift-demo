@@ -2,19 +2,19 @@ namespace py services.user
 namespace java services.user
 namespace go services.user
 
-include "types.thrift"
+include "./types.thrift"
 
 struct User {
-    10: types.UserID id;
-    20: types.UserInfo info;
+    10: types.UserID id
+    20: types.UserInfo info
 }
 
 struct GetUserByIdRequest {
-    10: list<types.UserID> ids;
+    10: list<types.UserID> ids
 }
 
 struct GetUserByIdResponse {
-    10: optional list<User> users;
+    10: optional list<User> users
 }
 
 service UserService {
