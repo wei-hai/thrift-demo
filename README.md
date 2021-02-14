@@ -5,5 +5,6 @@
 Generate thrift APIs
 
 ```bash
-make thrift-go
+brew install thrift
+make thrift-py
 ```
