@@ -3,11 +3,11 @@ from thrift.server import TServer
 from thrift.TMultiplexedProcessor import TMultiplexedProcessor
 from thrift.transport import TSocket, TTransport
 
-from services.product import ProductService
-from services.product.ttypes import GetProductByIdResponse, Product
-from services.types.ttypes import UserInfo
-from services.user import UserService
-from services.user.ttypes import GetUserByIdResponse, User
+from thrift.myapp.services.product import ProductService
+from thrift.myapp.services.product.ttypes import GetProductByIdResponse, Product
+from thrift.myapp.services.types.ttypes import UserInfo
+from thrift.myapp.services.user import UserService
+from thrift.myapp.services.user.ttypes import GetUserByIdResponse, User
 from thrift import transport
 
 
