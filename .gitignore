@@ -130,4 +130,4 @@ dmypy.json
 
 
 # Thrift
-thrift/services
+thrift/myapp/services
