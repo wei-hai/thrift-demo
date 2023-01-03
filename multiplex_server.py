@@ -3,12 +3,11 @@ from thrift.server import TServer
 from thrift.TMultiplexedProcessor import TMultiplexedProcessor
 from thrift.transport import TSocket, TTransport
 
-from thrift.myapp.services.product import ProductService
-from thrift.myapp.services.product.ttypes import GetProductByIdResponse, Product
-from thrift.myapp.services.types.ttypes import UserInfo
-from thrift.myapp.services.user import UserService
-from thrift.myapp.services.user.ttypes import GetUserByIdResponse, User
-from thrift import transport
+from thrifts.services.product import ProductService
+from thrifts.services.product.ttypes import GetProductByIdResponse, Product
+from thrifts.services.types.ttypes import UserInfo
+from thrifts.services.user import UserService
+from thrifts.services.user.ttypes import GetUserByIdResponse, User
 
 
 class UserServiceImpl:
@@ -46,8 +45,8 @@ protocol_factory = TBinaryProtocol.TBinaryProtocolFactory()
 processor = TMultiplexedProcessor()
 processor.registerProcessor("user_service", user_processor)
 processor.registerProcessor("product_service", product_processor)
-server = TServer.TSimpleServer(
-    processor, transport, transport_factory, protocol_factory)
+
+server = TServer.TThreadedServer(processor, transport, transport_factory, protocol_factory)
 print("Starting server")
 server.serve()
 print("Done")

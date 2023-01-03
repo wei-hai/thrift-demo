@@ -1,6 +1,6 @@
-namespace py thrift.myapp.services.product
-namespace java thrift.myapp.services.product
-namespace go thrift.myapp.services.product
+namespace py thrifts.services.product
+namespace java thrifts.services.product
+namespace go thrifts.services.product
 
 struct Product {
     10: string id

@@ -2,8 +2,8 @@ from thrift.protocol import TBinaryProtocol
 from thrift.protocol.TMultiplexedProtocol import TMultiplexedProtocol
 from thrift.transport import TSocket, TTransport
 
-from thrift.myapp.services.product import ProductService
-from thrift.myapp.services.user import UserService
+from thrifts.services.product import ProductService
+from thrifts.services.user import UserService
 
 # Make socket
 transport = TSocket.TSocket(host="localhost", port=9090)

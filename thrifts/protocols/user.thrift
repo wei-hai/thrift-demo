@@ -1,6 +1,6 @@
-namespace py thrift.myapp.services.user
-namespace java thrift.myapp.services.user
-namespace go thrift.myapp.services.user
+namespace py thrifts.services.user
+namespace java thrifts.services.user
+namespace go thrifts.services.user
 
 include "./types.thrift"
 
