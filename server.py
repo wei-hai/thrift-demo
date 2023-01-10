@@ -24,7 +24,7 @@ processor = UserService.Processor(userServiceImpl)
 transport = TSocket.TServerSocket(host="localhost", port=9090)
 transport_factory = TTransport.TBufferedTransportFactory()
 protocol_factory = TBinaryProtocol.TBinaryProtocolFactory()
-server = TServer.TSimpleServer(
+server = TServer.TThreadedServer(
     processor, transport, transport_factory, protocol_factory)
 print("Starting server")
 server.serve()
